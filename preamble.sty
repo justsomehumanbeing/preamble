@@ -6,7 +6,7 @@
 \RequirePackage[english]{babel}
 
 % clickable references 
-\RequirePackage{hyperref}
+\RequirePackage{hyperref}[colorlinks=true, linkcolor=purple, citecolor=green]
 
 % Document Layout
 % Configure geometry for margins and appendices
@@ -67,6 +67,10 @@
 \newcommand{\Vc}{\mathcal{V}} \newcommand{\Wc}{\mathcal{W}} \newcommand{\Xc}{\mathcal{X}}
 \newcommand{\Yc}{\mathcal{Y}} \newcommand{\Zc}{\mathcal{Z}}
 
+% Common abbreviations
+\newcommand{\ie}{i.\,e.~} % "that is"
+\newcommand{\eg}{e.\,g.~} % "for example"
+
 % Number Sets & other special sets
 \newcommand{\N}{\mathbb{N}} % Natural numbers
 \newcommand{\Z}{\mathbb{Z}} % Integers
@@ -97,7 +101,6 @@
 
 % Custom Symbols and Abbreviations
 % Math operators and formatting helpers
-\newcommand{\lcm}{\text{lcm}} % Least common multiple
 \newcommand{\tsc}[1]{\textsc{#1}} % Small caps for text
 \newcommand{\ga}[2]{{}^{#1}{#2}} % Generic annotation above a symbol
 
@@ -108,13 +111,14 @@
 \newcommand{\integral}[2]{\int\limits_{#1}^{#2}} % Integral
 
 % Miscellaneous Math Functions
-\newcommand{\Kern}{\mathrm{Kern}} % Kernel
-\newcommand{\Rang}{\mathrm{Rang}} % Range
-\newcommand{\Bin}{\mathrm{Bin}} % Binomial distribution
-\newcommand{\NBin}{\mathrm{NBin}} % Negative Binomial
-\newcommand{\Hyp}{\mathrm{Hyp}} % Hypergeometric
-\newcommand{\Geo}{\mathrm{Geo}} % Geometric
-\newcommand{\Poi}{\mathrm{Poi}} % Poisson
+\DeclareMathOperator{\lcm}{lcm} % Least common multiple
+\DeclareMathOperator{\Kern}{{Kern}} % Kernel
+\DeclareMathOperator{\Rang}{{Rang}} % Range
+\DeclareMathOperator{\Bin}{{Bin}} % Binomial distribution
+\DeclareMathOperator{\NBin}{{NBin}} % Negative Binomial
+\DeclareMathOperator{\Hyp}{{Hyp}} % Hypergeometric
+\DeclareMathOperator{\Geo}{{Geo}} % Geometric
+\DeclareMathOperator{\Poi}{{Poi}} % Poisson
 \newcommand{\EW}{\mathbb{E}} % Expected value
 \newcommand{\Pos}{\textbf{P}} % Probability
 \newcommand{\Poss}{\mathbb{P}} % Probability measure
@@ -123,30 +127,30 @@
 \newcommand{\fskonv}[1]{\xlongrightarrow[{#1} \to \infty]{\Poss \mathrm{-fast-sicher}}} % Almost sure convergence
 \newcommand{\konv}[1]{\xlongrightarrow[]{#1 \to \infty}} % General convergence
 \newcommand{\limes}[2]{\lim\limits_{#1 \to #2}} % Limit
-\newcommand{\supp}{\mathrm{supp}}
+\DeclareMathOperator{\supp}{supp}
 \renewcommand{\ae}{\text{-}\mathrm{almost}\text{-}\mathrm{every}\ }
 \newcommand{\Leb}{\mathsf{Leb}}
-\newcommand{\cl}{\mathrm{cl}}
+\DeclareMathOperator{\cl}{cl}
 \newcommand{\diam}{\mathsf{diam}}
 \newcommand{\inv}{^{-1}}
-\newcommand{\tint}{\mathrm{int}}
-\newcommand{\Id}{\mathrm{Id}}
+\DeclareMathOperator{\tint}{int}
+\DeclareMathOperator{\Id}{Id}
 \newcommand{\tund}{\mathrm{ und }}
 \newcommand{\Pot}[1]{\mathfrak{P}\kl #1 \kr}
 \newcommand{\card}{\mathsf{card}}
 \newcommand{\f}[2]{\forall #1 \in \mathbb{#2}}
 \newcommand{\e}[2]{\exists #1 \in \mathbb{#2} }
-\newcommand{\Graph}{\mathrm{Graph}} % Represents a graph
-\newcommand{\dom}{\mathrm{dom}} % Domain of a function
-\newcommand{\Aut}{\mathrm{Aut}} % Automorphism group
-\newcommand{\End}{\mathrm{End}} % Endomorphism group
-\newcommand{\Homeo}{\mathrm{Homeo}} % Homeomorphism group
-\newcommand{\Hom}{\mathrm{Hom}} % Homomorphism group
-\newcommand{\Stab}{\mathrm{Stab}} % Stabilizer group
-\newcommand{\ob}{\mathrm{ob}} % Objects in a category
-\newcommand{\Span}{\mathrm{Span}} % Span of vectors
-\newcommand{\denseness}{\mathrm{denseness}} % Indicates denseness
-\newcommand{\proj}{\mathrm{proj}} % Projection
+\DeclareMathOperator{\Graph}{Graph} % Represents a graph
+\DeclareMathOperator{\dom}{dom} % Domain of a function
+\DeclareMathOperator{\Aut}{Aut} % Automorphism group
+\DeclareMathOperator{\End}{End} % Endomorphism group
+\DeclareMathOperator{\Homeo}{Homeo} % Homeomorphism group
+\DeclareMathOperator{\Hom}{Hom} % Homomorphism group
+\DeclareMathOperator{\Stab}{Stab} % Stabilizer group
+\DeclareMathOperator{\ob}{ob} % Objects in a category
+\DeclareMathOperator{\Span}{Span} % Span of vectors
+\DeclareMathOperator{\denseness}{denseness} % Indicates denseness
+\DeclareMathOperator{\proj}{proj} % Projection
 
 % Category Labels
 % Define categories and algebraic structures
@@ -155,7 +159,7 @@
 \newcommand{\CHaus}{\mathsf{CHaus}} % Category of Compact Hausdorff Spaces
 \newcommand{\CMet}{\mathsf{CMet}} % Category of Complete Metric Spaces
 \newcommand{\Grp}{\mathsf{Grp}} % Category of Groups
-\renewcommand{\Prob}{\mathsf{Prob}} % Category of Probability Spaces
+\newcommand{\Prob}{\mathsf{Prob}} % Category of Probability Spaces
 \newcommand{\Meas}{\mathsf{Meas}} % Category of Measurable Spaces
 \newcommand{\PreMeas}{\mathsf{PreMeas}} % Pre-measurable spaces
 \newcommand{\TopGrp}{\mathsf{TopGrp}} % Category of Topological Groups
