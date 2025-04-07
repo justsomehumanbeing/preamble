@@ -1,0 +1,273 @@
+% Combined and Complete LaTeX Preamble
+
+% Input and Encoding
+% UTF-8 encoding and English language setup
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+
+% clickable references 
+\RequirePackage{hyperref}[colorlinks=true, linkcolor=purple, citecolor=green]
+
+% Document Layout
+% Configure geometry for margins and appendices
+\RequirePackage[toc, page]{appendix}
+%\RequirePackage[inner=4cm,outer=2cm,top=3cm,bottom=3cm]{geometry}
+
+% AMS and Mathematical Tools
+% Advanced math symbols and environments
+\RequirePackage{amsmath} 
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{amsthm}
+\RequirePackage{bbm}
+
+% Formatting and Visualization Tools
+% Additional features like margins and enumeration
+\RequirePackage{scrextend} % addmargin environment
+\RequirePackage{enumerate} % Customize symbols in lists
+\RequirePackage{framed,lipsum} % Frame boxes and dummy text
+\RequirePackage{xcolor} % Colors
+\RequirePackage{extarrows} % Extended arrows
+\RequirePackage{tikz} % Diagrams
+\RequirePackage{graphicx} % Graphics
+\RequirePackage[autostyle=true,german=quotes]{csquotes} % German quotes and footnotes
+\RequirePackage{tikz-cd} % Commutative diagrams
+
+% Mathematical Symbols in Special Fonts
+% Gothic letters
+\newcommand{\Af}{\mathfrak{A}} \newcommand{\Bf}{\mathfrak{B}} \newcommand{\Cf}{\mathfrak{C}}
+\newcommand{\Df}{\mathfrak{D}} \newcommand{\Ef}{\mathfrak{E}} \newcommand{\Ff}{\mathfrak{F}}
+\newcommand{\Gf}{\mathfrak{G}} \newcommand{\Hf}{\mathfrak{H}} \newcommand{\If}{\mathfrak{I}}
+\newcommand{\Jf}{\mathfrak{J}} \newcommand{\Kf}{\mathfrak{K}} \newcommand{\Lf}{\mathfrak{L}}
+\newcommand{\Mf}{\mathfrak{M}} \newcommand{\Nf}{\mathfrak{N}} \newcommand{\Of}{\mathfrak{O}}
+\newcommand{\Pf}{\mathfrak{P}} \newcommand{\Qf}{\mathfrak{Q}} \newcommand{\Rf}{\mathfrak{R}}
+\newcommand{\Sf}{\mathfrak{S}} \newcommand{\Tf}{\mathfrak{T}} \newcommand{\Uf}{\mathfrak{U}}
+\newcommand{\Vf}{\mathfrak{V}} \newcommand{\Wf}{\mathfrak{W}} \newcommand{\Xf}{\mathfrak{X}}
+\newcommand{\Yf}{\mathfrak{Y}} \newcommand{\Zf}{\mathfrak{Z}}
+
+% Bold letters
+\newcommand{\Ab}{\mathbf{A}} \newcommand{\Bb}{\mathbf{B}} \newcommand{\Cb}{\mathbf{C}}
+\newcommand{\Db}{\mathbf{D}} \newcommand{\Eb}{\mathbf{E}} \newcommand{\Fb}{\mathbf{F}}
+\newcommand{\Gb}{\mathbf{G}} \newcommand{\Hb}{\mathbf{H}} \newcommand{\Ib}{\mathbf{I}}
+\newcommand{\Jb}{\mathbf{J}} \newcommand{\Kb}{\mathbf{K}} \newcommand{\Lb}{\mathbf{L}}
+\newcommand{\Mb}{\mathbf{M}} \newcommand{\Nb}{\mathbf{N}} \newcommand{\Ob}{\mathbf{O}}
+\newcommand{\Pb}{\mathbf{P}} \newcommand{\Qb}{\mathbf{Q}} \newcommand{\Rb}{\mathbf{R}}
+\newcommand{\Sb}{\mathbf{S}} \newcommand{\Tb}{\mathbf{T}} \newcommand{\Ub}{\mathbf{U}}
+\newcommand{\Vb}{\mathbf{V}} \newcommand{\Wb}{\mathbf{W}} \newcommand{\Xb}{\mathbf{X}}
+\newcommand{\Yb}{\mathbf{Y}} \newcommand{\Zb}{\mathbf{Z}}
+
+% Calligraphic letters
+\newcommand{\Ac}{\mathcal{A}} \newcommand{\Bc}{\mathcal{B}} \newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}} \newcommand{\Ec}{\mathcal{E}} \newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}} \newcommand{\Hc}{\mathcal{H}} \newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}} \newcommand{\Kc}{\mathcal{K}} \newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}} \newcommand{\Nc}{\mathcal{N}} \newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}} \newcommand{\Qc}{\mathcal{Q}} \newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}} \newcommand{\Tc}{\mathcal{T}} \newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}} \newcommand{\Wc}{\mathcal{W}} \newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}} \newcommand{\Zc}{\mathcal{Z}}
+
+% Common abbreviations
+\newcommand{\ie}{i.\,e.~} % "that is"
+\newcommand{\eg}{e.\,g.~} % "for example"
+
+% Number Sets & other special sets
+\newcommand{\N}{\mathbb{N}} % Natural numbers
+\newcommand{\Z}{\mathbb{Z}} % Integers
+\newcommand{\Q}{\mathbb{Q}} % Rational numbers
+\newcommand{\R}{\mathbb{R}} % Real numbers
+\newcommand{\C}{\mathbb{C}} % Complex numbers
+\newcommand{\T}{\mathbb{T}} % torus
+\renewcommand{\S}{\mathbb{S}} % circle
+
+\newcommand{\B}{\mathfrak{B}} % Borel sets
+\newcommand{\M}{\mathcal{M}} % Measurable Functions
+\renewcommand{\L}{\mathcal{L}} % Lebesgue integral functions (pre L^p spaces)
+
+\newcommand{\1}{\mathbbmss{1}} % indicator function
+
+
+% Custom Brackets
+\newcommand{\kl}{\left(} % Left parenthesis
+\newcommand{\kr}{\right)} % Right parenthesis
+\newcommand{\ml}{\left\{} % Left curly brace
+\newcommand{\mr}{\right\}} % Right curly brace
+\newcommand{\bl}{\left\lvert} % Left vertical bar
+\newcommand{\br}{\right\rvert} % Right vertical bar
+\newcommand{\il}{\left[} % Left square bracket
+\newcommand{\ir}{\right]} % Right square bracket
+\newcommand{\mm}{\;\middle\vert\;} % Middle bar for set notation
+\newcommand{\high}[1]{\rule{0pt}{ #1pt }} %set custum height
+
+% Custom Symbols and Abbreviations
+% Math operators and formatting helpers
+\newcommand{\tsc}[1]{\textsc{#1}} % Small caps for text
+\newcommand{\ga}[2]{{}^{#1}{#2}} % Generic annotation above a symbol
+
+% Sums, Products, and Integrals
+\newcommand{\summe}[3]{\sum\limits_{#1 = #2}^{#3}} % Summation
+\newcommand{\produkt}[3]{\prod\limits_{#1 = #2}^{#3}} % Product
+\newcommand{\dd}[1]{\;\mathrm{d} #1} % Differential
+\newcommand{\integral}[2]{\int\limits_{#1}^{#2}} % Integral
+
+% Miscellaneous Math Functions
+\DeclareMathOperator{\lcm}{lcm} % Least common multiple
+\DeclareMathOperator{\Kern}{{Kern}} % Kernel
+\DeclareMathOperator{\Rang}{{Rang}} % Range
+\DeclareMathOperator{\Bin}{{Bin}} % Binomial distribution
+\DeclareMathOperator{\NBin}{{NBin}} % Negative Binomial
+\DeclareMathOperator{\Hyp}{{Hyp}} % Hypergeometric
+\DeclareMathOperator{\Geo}{{Geo}} % Geometric
+\DeclareMathOperator{\Poi}{{Poi}} % Poisson
+\newcommand{\EW}{\mathbb{E}} % Expected value
+\newcommand{\Pos}{\textbf{P}} % Probability
+\newcommand{\Poss}{\mathbb{P}} % Probability measure
+\newcommand{\Folge}[2]{$\kl {#1}_{#2}  \kr_{{#2} \in \N}$} % Sequence notation
+\newcommand{\skonv}[1]{\xlongrightarrow[{#1} \to \infty]{\Poss}} % Convergence in probability
+\newcommand{\fskonv}[1]{\xlongrightarrow[{#1} \to \infty]{\Poss \mathrm{-fast-sicher}}} % Almost sure convergence
+\newcommand{\konv}[1]{\xlongrightarrow[]{#1 \to \infty}} % General convergence
+\newcommand{\limes}[2]{\lim\limits_{#1 \to #2}} % Limit
+\DeclareMathOperator{\supp}{supp}
+\renewcommand{\ae}{\text{-}\mathrm{almost}\text{-}\mathrm{every}\ }
+\newcommand{\Leb}{\mathsf{Leb}}
+\DeclareMathOperator{\cl}{cl}
+\newcommand{\diam}{\mathsf{diam}}
+\newcommand{\inv}{^{-1}}
+\DeclareMathOperator{\tint}{int}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\tund}{\mathrm{ und }}
+\newcommand{\Pot}[1]{\mathfrak{P}\kl #1 \kr}
+\newcommand{\card}{\mathsf{card}}
+\newcommand{\f}[2]{\forall #1 \in \mathbb{#2}}
+\newcommand{\e}[2]{\exists #1 \in \mathbb{#2} }
+\DeclareMathOperator{\Graph}{Graph} % Represents a graph
+\DeclareMathOperator{\dom}{dom} % Domain of a function
+\DeclareMathOperator{\Aut}{Aut} % Automorphism group
+\DeclareMathOperator{\End}{End} % Endomorphism group
+\DeclareMathOperator{\Homeo}{Homeo} % Homeomorphism group
+\DeclareMathOperator{\Hom}{Hom} % Homomorphism group
+\DeclareMathOperator{\Stab}{Stab} % Stabilizer group
+\DeclareMathOperator{\ob}{ob} % Objects in a category
+\DeclareMathOperator{\Span}{Span} % Span of vectors
+\DeclareMathOperator{\denseness}{denseness} % Indicates denseness
+\DeclareMathOperator{\proj}{proj} % Projection
+
+% Category Labels
+% Define categories and algebraic structures
+\newcommand{\Set}{\mathsf{Set}} % Category of Sets
+\newcommand{\Top}{\mathsf{Top}} % Category of Topological Spaces
+\newcommand{\CHaus}{\mathsf{CHaus}} % Category of Compact Hausdorff Spaces
+\newcommand{\CMet}{\mathsf{CMet}} % Category of Complete Metric Spaces
+\newcommand{\Grp}{\mathsf{Grp}} % Category of Groups
+\newcommand{\Prob}{\mathsf{Prob}} % Category of Probability Spaces
+\newcommand{\Meas}{\mathsf{Meas}} % Category of Measurable Spaces
+\newcommand{\PreMeas}{\mathsf{PreMeas}} % Pre-measurable spaces
+\newcommand{\TopGrp}{\mathsf{TopGrp}} % Category of Topological Groups
+\renewcommand{\Vec}{\mathsf{Vec}} % Category of Vector Spaces
+\newcommand{\FinVec}{\mathsf{FinVec}} % Category of Finite-Dimensional Vector Spaces
+\newcommand{\Mon}{\mathsf{Mon}} % Category of Monoids
+
+\newcommand{\TopDyn}{\mathsf{TopDyn}} % Category of Topological Dynamical Systems
+\newcommand{\CMetDyn}{\mathsf{CMetDyn}} % Category of Complete Metric Dynamical Systems
+\newcommand{\CHausDyn}{\mathsf{CHausDyn}} % Category of Compact Hausdorff Dynamical Systems
+\newcommand{\ueTopDyn}{\mathsf{ueTopDyn}} % Uniquely Equicontinuous Topological Dynamical Systems
+\newcommand{\ueCHausDyn}{\mathsf{ueCHausDyn}} % Uniquely Equicontinuous Compact Hausdorff Dynamical Systems
+\newcommand{\MeasDyn}{\mathsf{MeasDyn}} % Measurable Dynamical Systems
+\newcommand{\ProbDyn}{\mathsf{ProbDyn}} % Probability Preservingn Dynamical Systems
+\newcommand{\EquiDyn}{\mathsf{EquiDyn}} % Equicontinuous Dynamical Systems
+\newcommand{\measTopDyn}{\mathsf{measTopDyn}} % Measurable Topological Dynamical Systems
+\newcommand{\measCHausDyn}{\mathsf{measCHausDyn}} % Measurable Compact Hausdorff Dynamical Systems
+
+\newcommand{\op}{\mathsf{op}} % Opposite category
+
+% Miscellaneous abbreviations
+\newcommand{\tds}{\texttt{tds}} % Dynamical Systems (non-math font)
+\newcommand{\mpds}{\texttt{mpds}} % Measurable Probabilistic Dynamical Systems
+\newcommand{\icer}{\texttt{icer}} % Identifier for some mathematical concept (unsure)
+\newcommand{\MEF}{\mathsf{MEF}} % Maximal Equicontinuous Factor
+\newcommand{\mef}{\texttt{mef}} % Maximal Equicontinuous Factor in lower case
+
+% Common Algebra Symbols
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert} % Norm notation
+
+% Referencing Utilities
+% Custom reference styles
+\newcommand{\refe}[1]{(\ref{#1})} % Equation references
+\newcommand{\refi}[1]{\ref{item:#1})} % Item references
+\newcommand{\reflem}[1]{Lemma \ref{lem:#1}} % Lemma references
+\newcommand{\refprop}[1]{Proposition \ref{prop:#1}} % Proposition references
+\newcommand{\refthm}[1]{Theorem \ref{thm:#1}} % Theorem references
+\newcommand{\refcor}[1]{Corollary \ref{cor:#1}} % Corollary references
+
+% Formatting and Layout
+\newcommand{\ubar}[1]{\underset{\bar{}}{#1}} % Under-bar styling
+\newcommand{\tand}{\;\; \text{ and } \;\;} % Styled "and"
+
+% Special Fonts for Contexts
+\newcommand{\zit}[1]{{\textit{\enquote{#1}}}}
+\newcommand{\introzit}[2]{\hrulefill \hspace{1pt}
+{\raggedleft \scriptsize {\zit{#1}}\\
+{#2}}
+\hrulefill}
+\newcommand{\introzitrev}[3]{
+{\raggedright \scriptsize {\zit{{#1}\hspace{3pt}\hrulefill\\
+{#2} }\\
+\hrulefill{\hspace{3pt}\raggedleft{#3}}}}}
+\newcommand{\idea}[1]{\begin{center}  \textit{\textbf{#1}} \end{center}}
+\newcommand{\statement}[1]{\enquote{#1}}
+\newcommand{\person}[1]{\textsc{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\todo}[1]{{\color{red} TODO: \textbf{#1}}} % TODO notes
+
+% Other Tools and Commands
+\newcommand{\longtwoheadarrow}{\relbar\joinrel\twoheadrightarrow} % Long surjective arrow
+
+% Theorem Environments
+% Define custom theorem styles
+\newtheorem{thm}{\textsc{Theorem}}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{qu}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{sit}[thm]{Situation}
+\newtheorem{const}[thm]{Construction}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}{Remark}[thm]
+\newtheorem{ex}{Example}[thm]
+\theoremstyle{definition}
+
+%%% Theorem environments with QED at the end for theorems with omitted proof
+%The QED symbol shall be a small black box (compared to a big empty box for end of proofs)
+\usepackage[geometry]{ifsym}
+\newenvironment{proventhm}
+{\renewcommand{\qedsymbol}{\hfill\FilledSmallSquare}% 
+\pushQED{\qed}\begin{thm}}
+{\popQED\end{thm}}
+
+\newenvironment{provenlem}
+{\renewcommand{\qedsymbol}{\hfill\FilledSmallSquare}%
+\pushQED{\qed}\begin{lem}}
+{\popQED\end{lem}}
+
+\newenvironment{provenprop}
+{\renewcommand{\qedsymbol}{\hfill\FilledSmallSquare}%
+\pushQED{\qed}\begin{prop}}
+{\popQED\end{prop}}
+
+\newenvironment{provencor}
+{\renewcommand{\qedsymbol}{\hfill\FilledSmallSquare}%
+\pushQED{\qed}\begin{cor}}
+{\popQED\end{cor}}
+
+% Special proof like types:
+\newenvironment{construction}[1][Construction]
+	{\begin{proof}[#1]
+		\renewcommand*{\qedsymbol}{$\triangle$}}
+	{\end{proof}}
+
+\newenvironment{strategy}[1][Strategy]
+	{\begin{proof}[#1]
+		\renewcommand*{\qedsymbol}{$\diamond$}}
+	{\end{proof}}
