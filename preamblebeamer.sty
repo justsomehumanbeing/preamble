@@ -1,17 +1,36 @@
 % Combined and Complete LaTeX Preamble
 
 % Input and Encoding
-% UTF-8 encoding and English language setup
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[english]{babel}
+% Engine-aware setup for copy/paste friendly PDFs
+\RequirePackage{iftex}
+\ifLuaTeX
+  % LuaLaTeX: Unicode fonts and math out of the box
+  \RequirePackage{fontspec}
+  \RequirePackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmathfont{Latin Modern Math}
+  \RequirePackage[english]{babel}
+\else
+  % pdfLaTeX: enable UTF-8 and vector fonts
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{lmodern}
+  \RequirePackage[english]{babel}
+  \RequirePackage{cmap}
+  \input glyphtounicode.tex
+  \pdfgentounicode=1
+\fi
 
-% clickable references 
-\RequirePackage{hyperref}[colorlinks=true, linkcolor=purple, citecolor=green]
+% clickable references and metadata
+\RequirePackage[pdfencoding=auto,psdextra,colorlinks=true,linkcolor=purple,citecolor=green]{hyperref}
 
 % Document Layout
 % Configure geometry for margins and appendices
 \RequirePackage[toc, page]{appendix}
 %\RequirePackage[inner=4cm,outer=2cm,top=3cm,bottom=3cm]{geometry}
+\RequirePackage{microtype}
 
 % AMS and Mathematical Tools
 % Advanced math symbols and environments
